@@ -31,6 +31,7 @@ app.get('/script', (req, res) =>{
 app.get('/api/robots', (req, res) => {
     try {
         res.status(200).send(botsArr)
+        rollbar.log("User viewed bots")
     } catch (error) {
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
