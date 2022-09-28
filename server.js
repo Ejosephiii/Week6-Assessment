@@ -16,16 +16,16 @@ rollbar.log("connected")
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 }
 )
 
-app.get('/css', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public/index.css'))
+app.get('/styles', (req, res) =>{
+    res.sendFile(path.join(__dirname, './public/index.css'))
 })
 
-app.get('/script', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public/index.js'))
+app.get('/js', (req, res) =>{
+    res.sendFile(path.join(__dirname, './public/index.js'))
 })
 
 app.get('/api/robots', (req, res) => {

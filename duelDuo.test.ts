@@ -19,12 +19,22 @@ test('Title shows up when page loads', async () => {
     const displayed = await title.isDisplayed()
     expect(displayed).toBe(true)
 })
-test('test1', async () => {
-    const drawBtnDisplay = await driver.findElement(By.id('choices'))
-    const displays = await await drawBtnDisplay.isDisplayed()
+
+test('Draw button choices pop up when I press the draw button', async () => {
+    await driver.findElement(By.id('draw')).click()
+   await driver.sleep(1000)
+
+   const choices = await driver.findElement(By.id('choices'))
+   const displayed = await choices.isDisplayed
+   
+   expect(displayed).toEqual(true)
+
+   
 })
 
 test('test2', async () => {
-    const addButtonDisplay = await driver.findElement(By.id('player-duo'))
-    const displays2 = await await addButtonDisplay.isDisplayed()
+    const choices = await driver.findElement(By.id('choices'))
+    const displayed = await choices.isDisplayed
+    
+    expect(displayed).toEqual(true)
 })
